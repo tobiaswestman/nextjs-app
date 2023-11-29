@@ -1,0 +1,205 @@
+.navbar {
+    position: absolute;
+    background-color: rgba(55, 54, 54, 0);
+
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-family: var(--font-lato);
+}
+
+.navbar .brand {
+    padding: 0.75rem 1rem;
+    color: white;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+
+    margin-left: 15%;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.navbar img {
+    height: 90%;
+    width: 30px;
+}
+
+.navbar a.active {
+    color: var(--color-pink);
+}
+
+.navbar .logo {
+    font-weight: bolder;
+    color: var(--color-pink);
+}
+
+.navbar-links {
+    margin-right: 15%;
+}
+
+.navbar-links ul {
+    display: flex;
+    gap: 1rem;
+
+    list-style-type: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar li a.active:hover {
+    color: white;
+}
+
+.navbar li a:hover {
+    color: var(--color-pink);
+}
+
+.navbar-links a {
+    font-weight: bold;
+    font-size: 0.875rem;
+}
+
+#hamburger-menu {
+    /* background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 0rem;
+    right: 0rem; */
+
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    display: none; /* this is overridden in the media query */
+    position: absolute;
+    top: 1rem; /* adjust as needed */
+    right: 1rem; /* adjust as needed */
+    width: 3rem; /* enough to cover the icon */
+    height: 3rem; /* enough to cover the icon */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#hamburger-menu img {
+    /* height: 2rem;
+    width: 2rem;
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem; */
+
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+}
+
+#hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+    margin: 4px 0;
+}
+
+#hamburger-menu .openIcon {
+    display: block;
+}
+
+#hamburger-menu .closeIcon {
+    display: none;
+}
+
+#hamburger-menu.open .openIcon {
+    display: none;
+}
+
+#hamburger-menu.open .closeIcon {
+    display: block;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 900px) {
+    #hamburger-menu {
+        display: block;
+    }
+
+    .navbar {
+        position: fixed;
+        background-color: rgba(55, 54, 54, 0.8);
+        transition: background-color 0.2s ease-in-out;
+
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        justify-content: center;
+    }
+
+    .navbar .brand {
+        margin-left: 2%;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links a {
+        font-size: 1.5rem;
+    }
+
+    .navbar.open {
+        background-color: rgba(44, 44, 44, 0.99);
+    }
+
+    .navbar-links.open {
+        display: block;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        padding-left: 0;
+        height: 100%;
+        margin-bottom: 20px;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .navbar-links ul li:hover {
+        background-color: #ec135ba4;
+    }
+
+    .navbar-links ul li:hover a {
+        color: white;
+    }
+}
+
+@media screen and (max-width: 270px) {
+    .brand-text {
+        display: none;
+    }
+}
