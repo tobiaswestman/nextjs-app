@@ -1,0 +1,132 @@
+.product-showcase {
+    background-color: #f4f4f4;
+    height: auto;
+    color: grey;
+    line-height: 1.5;
+    padding: 0 15% 5%;
+    font-family: var(--font-lato);
+}
+
+.product-showcase p {
+    padding: 0 20% 5% 20%;
+}
+
+.product-showcase .row {
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+
+.product-showcase .container {
+    padding-top: 5%;
+}
+
+.product-showcase .accent-line-small {
+    width: 180px;
+}
+
+.product-card {
+    width: 200px;
+    height: auto;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+.product-card:hover .card-top {
+    background-color: var(--color-pink);
+}
+
+.card-top {
+    background-color: #5a5a5a;
+    color: white;
+    padding: 10px 10px 30px;
+    height: 30%;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.product-card .active {
+    background-color: var(--color-pink);
+}
+
+.price-row {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.per-month-row {
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin-top: -10px;
+}
+
+.label {
+    background-color: #e0e0e0;
+    color: rgb(73, 73, 73);
+    font-family: var(--font-lato);
+    font-weight: 900;
+    padding: 5px 20px;
+    margin: -15px;
+    display: inline-block;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    position: absolute;
+    left: 20%;
+    right: 20%;
+}
+
+.card-bottom {
+    background-color: white;
+    padding: 20px;
+    height: 100%;
+}
+
+.features-list {
+    list-style: none;
+    padding: 10px 0 5px;
+    text-align: center;
+    font-size: 0.8125rem;
+    font-family: var(--font-lato);
+    font-weight: 400;
+}
+
+.small-currency {
+    font-size: 0.875rem;
+}
+
+.features-list li {
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1250px) {
+    .section.product-showcase {
+        padding: 2% 15vh;
+    }
+}
+
+@media screen and (max-width: 1130px) {
+    .section.product-showcase {
+        padding: 2% 5vh;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .product-showcase .row {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .product-showcase .row {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .product-showcase p {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

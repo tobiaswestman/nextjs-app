@@ -1,0 +1,136 @@
+.carousel {
+    background-color: var(--color-darkgrey);
+    background-image: var(--bg-image);
+
+    color: white;
+    font-family: var(--font-lato);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-size: cover;
+    box-shadow: var(--bg-boxshadow);
+    background-position: 50% 35%;
+}
+
+.quotes {
+    font-size: 2.5rem;
+    color: var(--color-pink);
+}
+
+blockquote h3:before,
+blockquote h3:after {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: bold;
+    font-size: 5rem;
+    color: var(--color-pink);
+    line-height: 0;
+    vertical-align: -0.5em;
+}
+
+blockquote h3:before {
+    content: open-quote;
+}
+blockquote h3:after {
+    content: close-quote;
+}
+
+.carousel-content {
+    display: inline-block;
+    height: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.carousel-text {
+    display: none;
+
+    font-size: 1em;
+    font-family: var(--font-lato);
+    color: var(--color-lightgrey2);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.8;
+}
+
+.text-container {
+    padding: 5px 15%;
+
+    height: 175px;
+    display: flex;
+    align-items: center;
+}
+
+.active {
+    display: block;
+}
+
+.carousel-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.left-arrow,
+.right-arrow {
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.left-arrow:hover {
+    transform: translateX(-5px);
+}
+
+.right-arrow:hover {
+    transform: translateX(5px);
+}
+
+.quote-img {
+    width: 40px;
+}
+
+@media screen and (max-width: 1250px) {
+    .carousel-content {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .section.carousel {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .carousel-text {
+        font-size: 0.8em;
+        padding: 10% 5%;
+    }
+
+    .text-container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .carousel-content {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .carousel-content .quote-img {
+        display: none;
+    }
+
+    .section.carousel {
+        padding: 1% 5%;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .carousel {
+        display: none;
+    }
+}

@@ -1,0 +1,45 @@
+.productivity {
+    background-color: var(--color-darkgrey);
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family: var(--font-lato);
+    color: white;
+    position: relative;
+    background-size: cover;
+    background-image: var(--bg-image);
+    box-shadow: var(--bg-boxshadow);
+    background-position: 50% 35%;
+    padding-top: 5%;
+    padding-bottom: 8%;
+}
+
+.productivity p {
+    font-size: 0.875rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.productivity .hero-content h1 {
+    font-weight: 300;
+    font-style: italic;
+}
+
+.productivity .accent-line-small {
+    width: 160px;
+    height: 3px;
+}
+
+.productivity .btn-primary:hover {
+    box-shadow: #d71153b7 0 8px 15px;
+}
+
+@media screen and (max-width: 270px) {
+    .productivity .accent-line-small {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

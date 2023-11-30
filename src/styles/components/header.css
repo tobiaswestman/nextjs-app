@@ -67,35 +67,18 @@
 }
 
 #hamburger-menu {
-    /* background-color: transparent;
+    background-color: transparent;
     border: 0;
     cursor: pointer;
     display: none;
     position: absolute;
-    top: 0rem;
-    right: 0rem; */
-
-    background-color: transparent;
-    border: 0;
-    cursor: pointer;
-    display: none; /* this is overridden in the media query */
-    position: absolute;
-    top: 1rem; /* adjust as needed */
-    right: 1rem; /* adjust as needed */
-    width: 3rem; /* enough to cover the icon */
-    height: 3rem; /* enough to cover the icon */
-    background: transparent;
-    border: none;
-    cursor: pointer;
+    top: 0.2rem;
+    right: 0.8rem;
+    width: 3rem;
+    height: 3rem;
 }
 
 #hamburger-menu img {
-    /* height: 2rem;
-    width: 2rem;
-    position: absolute;
-    top: 0.75rem;
-    right: 0.75rem; */
-
     height: 100%;
     width: 100%;
     position: absolute;

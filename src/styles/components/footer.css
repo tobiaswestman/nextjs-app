@@ -1,0 +1,11 @@
+.footer {
+    background-color: var(--color-darkergrey);
+    height: 150px;
+    color: white;
+    font-size: 0.75rem;
+    font-family: var(--font-lato);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
