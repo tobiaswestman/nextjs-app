@@ -1,82 +1,82 @@
 .hero {
-    background-color: var(--color-darkgrey);
-    height: 600px;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    font-family: var(--font-lato);
+	background-color: var(--color-darkgrey);
+	height: 600px;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	font-family: var(--font-lato);
 
-    position: relative;
-    background-size: cover;
-    background-image: var(--bg-image);
-    box-shadow: var(--bg-boxshadow);
-    background-position: 50% 35%;
+	position: relative;
+	background-size: cover;
+	background-image: var(--bg-image);
+	box-shadow: var(--bg-boxshadow);
+	background-position: 50% 35%;
 }
 
 .hero-content {
-    text-align: center;
-    width: 60%;
+	text-align: center;
+	width: 60%;
 }
 
 .hero .accent-line-small {
-    width: 180px;
-    height: 3px;
+	width: 180px;
+	height: 3px;
 }
 
 .hero h1 {
-    color: white;
-    font-size: 2.125rem;
-    letter-spacing: 2px;
+	color: white;
+	font-size: 2.125rem;
+	letter-spacing: 2px;
 }
 
 .hero .bold-text {
-    font-weight: 900;
+	font-weight: 900;
 }
 
 .hero .lighter-text {
-    font-weight: 300;
+	font-weight: 300;
 }
 
 .hero p {
-    color: var(--color-lightgrey2);
-    line-height: 1.8;
-    font-size: 1.125rem;
-    padding-left: 20%;
-    padding-right: 20%;
+	color: var(--color-lightgrey2);
+	line-height: 1.8;
+	font-size: 1.125rem;
+	padding-left: 20%;
+	padding-right: 20%;
 }
 
 .hero .btn-primary:hover {
-    box-shadow: #d71153b7 0 8px 15px;
+	box-shadow: #d71153b7 0 8px 15px;
 }
 
 @media screen and (max-width: 400px) {
-    .hero p {
-        padding-left: 0;
-        padding-right: 0;
-    }
+	.hero p {
+		padding-left: 0;
+		padding-right: 0;
+	}
 
-    .hero .bold-text {
-        font-size: smaller;
-    }
+	.hero .bold-text {
+		font-size: smaller;
+	}
 
-    .hero .lighter-text {
-        font-size: smaller;
-    }
+	.hero .lighter-text {
+		font-size: smaller;
+	}
 
-    .hero .accent-line-small {
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-    }
+	.hero .accent-line-small {
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 @media screen and (max-width: 270px) {
-    .hero .bold-text {
-        font-size: 1.125rem;
-    }
+	.hero .bold-text {
+		font-size: 1.125rem;
+	}
 
-    .hero .lighter-text {
-        font-size: 1.125rem;
-    }
+	.hero .lighter-text {
+		font-size: 1.125rem;
+	}
 }
