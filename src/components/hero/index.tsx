@@ -1,28 +1,31 @@
-interface Props {
-    title: string;
-}
+import { HeroSection } from '@/models/Sections';
+import { FC } from 'react';
 
-const Hero = () => {
-    return (
-        <div className="hero">
-            <div className="hero-content">
-                <h1>
-                    <span className="bold-text">CAMELON-SAAS</span>
-                    <span className="lighter-text"> ÄR GRATIS</span>
-                </h1>
-                <div className="accent-line accent-line-small"></div>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, praesentium vero
-                    ipsam quis ad similique
-                </p>
-                <br />
+const Hero: FC<HeroSection> = ({
+  boldText,
+  lighText,
+  subText,
+  calToAction,
+}) => {
+  return (
+    <div className="hero">
+      <div className="hero-content">
+        <h1>
+          <span className="bold-text">{boldText}</span>
+          <span className="lighter-text">{lighText}</span>
+        </h1>
+        <div className="accent-line accent-line-small"></div>
+        <p>{subText}</p>
+        <br />
 
-                <a href="#about" className="btn-primary">
-                    VISA MER
-                </a>
-            </div>
-        </div>
-    );
+        {calToAction && (
+          <a href={calToAction.url} target={calToAction.target} className="btn-primary">
+            {calToAction.text}
+          </a>
+        )}
+      </div>
+    </div>
+  );
 };
 
 export default Hero;
