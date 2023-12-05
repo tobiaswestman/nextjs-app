@@ -5,12 +5,14 @@ const Hero: FC<HeroSection> = ({ boldText, lightText, subText, callToAction }) =
 	return (
 		<div className="hero">
 			<div className="hero-content">
-				<h1>
-					<span className="bold-text">{boldText}</span>
-					<span className="lighter-text">{lightText}</span>
-				</h1>
+				{boldText && lightText && (
+					<h1>
+						<span className="bold-text">{boldText}</span>
+						<span className="lighter-text">{lightText}</span>
+					</h1>
+				)}
 				<div className="accent-line accent-line-small"></div>
-				<p>{subText}</p>
+				{subText && <p>{subText}</p>}
 				<br />
 
 				{callToAction && (

@@ -1,22 +1,26 @@
-const Productivity = () => {
-    return (
-        <div className="productivity" id="productivity">
-            <div className="hero-content">
-                <h1>
-                    <span className="lighter-text">Ökad produktivitet</span>
-                </h1>
-                <div className="accent-line accent-line-small"></div>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius fuga ratione
-                    repellendus commodi, optio illum id odit dolores! Labore debitis cum provident
-                    ullam quaerat sapiente, fuga inventore asperiores reprehenderit a quia ducimus
-                    assumenda est fugiat vero deserunt eligendi perferendis totam temporibus culpa
-                    natus soluta. Molestias distinctio neque placeat minima esse.
-                </p>
-                <button className="btn-primary">LÄS MER</button>
-            </div>
-        </div>
-    );
+import { ProductivitySection } from "@/models/Sections";
+import { subtle } from "crypto";
+import { FC } from "react";
+
+const Productivity: FC<ProductivitySection> = ({ title, subText, callToAction }) => {
+	return (
+		<div className="productivity" id="productivity">
+			<div className="hero-content">
+				{title && (
+					<h1>
+						<span className="lighter-text">{title}</span>
+					</h1>
+				)}
+				<div className="accent-line accent-line-small"></div>
+				{subText && <p>{subText}</p>}
+				{callToAction && (
+					<a href={callToAction.url} target={callToAction.target} className="btn-primary">
+						{callToAction.text}
+					</a>
+				)}
+			</div>
+		</div>
+	);
 };
 
 export default Productivity;

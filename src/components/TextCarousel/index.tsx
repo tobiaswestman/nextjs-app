@@ -1,13 +1,18 @@
-import React, { useState, useEffect } from "react";
+import { TextCarouselSection } from "@/models/Sections";
+import React, { useState, useEffect, FC } from "react";
+import Image from "next/image";
 
-const TextCarousel = () => {
+interface CarouselTextProps {
+	text: string;
+	isActive: boolean;
+}
+
+const CarouselText: FC<CarouselTextProps> = ({ text, isActive }) => (
+	<p className={`carousel-text ${isActive ? "active" : ""}`}>{text}</p>
+);
+
+const TextCarousel: FC<TextCarouselSection> = ({ texts }) => {
 	const [currentIndex, setCurrentIndex] = useState(0);
-	const texts = [
-		"1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur perferendis blanditiis, aperiam voluptas libero pariatur delectus cumquerecusandae. Ipsam aliquam quisquam molestias unde. Veritatis eum, deserunt",
-		"2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur perferendis blanditiis, aperiam voluptas libero pariatur delectus cumquerecusandae. Ipsam aliquam quisquam molestias unde. Veritatis eum, deserunt",
-		"3. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur perferendis blanditiis, aperiam voluptas libero pariatur delectus cumquerecusandae. Ipsam aliquam quisquam molestias unde. Veritatis eum, deserunt",
-		"4. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur perferendis blanditiis, aperiam voluptas libero pariatur delectus cumquerecusandae. Ipsam aliquam quisquam molestias unde. Veritatis eum, deserunt",
-	];
 
 	const updateText = (newIndex: number) => {
 		setCurrentIndex(newIndex);
@@ -23,20 +28,30 @@ const TextCarousel = () => {
 		updateText(newIndex);
 	};
 
+	if (!texts) {
+		return null;
+	}
+
 	return (
 		<>
 			{texts.length > 0 && (
 				<div className="section carousel">
 					<div className="carousel-content">
-						<img
-							src="images/textCarousel/quote-before.svg"
+						<Image
+							width={30}
+							height={30}
+							loading="lazy"
+							src="/images/textCarousel/quote-before.svg"
 							alt=""
 							className="quote-img"
 						/>
 						<div className="carousel-row">
 							<div>
-								<img
-									src="images/textCarousel/left-pointer.svg"
+								<Image
+									width={30}
+									height={30}
+									loading="lazy"
+									src="/images/textCarousel/left-pointer.svg"
 									alt=""
 									className="carousel-arrow left-arrow"
 									onClick={handleLeftClick}
@@ -44,27 +59,30 @@ const TextCarousel = () => {
 							</div>
 							<div className="text-container">
 								{texts.map((text, index) => (
-									<p
+									<CarouselText
 										key={index}
-										className={`carousel-text ${
-											index === currentIndex ? "active" : ""
-										}`}
-									>
-										{text}
-									</p>
+										text={text}
+										isActive={index === currentIndex}
+									/>
 								))}
 							</div>
 							<div>
-								<img
-									src="images/textCarousel/right-pointer.svg"
+								<Image
+									width={30}
+									height={30}
+									loading="lazy"
+									src="/images/textCarousel/right-pointer.svg"
 									alt=""
 									className="carousel-arrow right-arrow"
 									onClick={handleRightClick}
 								/>
 							</div>
 						</div>
-						<img
-							src="images/textCarousel/quote-after.svg"
+						<Image
+							width={30}
+							height={30}
+							loading="lazy"
+							src="/images/textCarousel/quote-after.svg"
 							alt=""
 							className="quote-img"
 						/>
