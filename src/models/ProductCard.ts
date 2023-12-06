@@ -1,9 +1,8 @@
 import { Link } from "./Link";
 
 export interface ProductCard {
-	price: number;
-	version: string;
-	features: string[];
-	callToAction: Link;
-	// buttonText?: string;
+    price: number;
+    version: string;
+    features: string[];
+    callToAction: Link;
 }
